@@ -25,7 +25,7 @@ def compress_img(image_name, new_size_ratio=0.9, quality=90, width=None, height=
 
     if new_size_ratio < 1.0:
         # If resizing ratio is below 1.0, multiply width & height with this ratio to reduce image size
-        img = img.resize((int(img.size[0] * new_size_ratio), int(img.size[1] * new_size_ratio)), Image.ANTIALIAS)
+        img = img.resize((int(img.size[0] * new_size_ratio), int(img.size[1] * new_size_ratio)), Image.LANCZOS)
     elif width and height:
         # If width and height are set, resize with them instead
         img = img.resize((width, height), Image.ANTIALIAS)
@@ -49,5 +49,5 @@ def compress_img(image_name, new_size_ratio=0.9, quality=90, width=None, height=
     print(f"[*] Compressed image saved as: {new_filename}")
 
 # Example usage:
-Input=input()
+Input=input("Enter location of the Image")
 compress_img(Input, new_size_ratio=0.8, quality=80, width=800,height=600)
