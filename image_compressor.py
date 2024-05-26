@@ -49,5 +49,5 @@ def compress_img(image_name, new_size_ratio=0.9, quality=90, width=None, height=
     print(f"[*] Compressed image saved as: {new_filename}")
 
 # Example usage:
-Input=input("Enter location of the Image")
+Input=input("Enter location of the Image :")
 compress_img(Input, new_size_ratio=0.8, quality=80, width=800,height=600)
